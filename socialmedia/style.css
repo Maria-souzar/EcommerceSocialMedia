@@ -1,0 +1,657 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+:root {
+    --azul-escuro: #082f49;
+    --azul: #1264db;
+    --azul-claro: #eaf2ff;
+    --texto: #171923;
+    --cinza: #737987;
+    --fundo: #f6f7f9;
+    --branco: #ffffff;
+    --borda: #e8eaf0;
+    --verde: #075b43;
+    --sombra: 0 8px 25px rgba(20, 35, 70, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: var(--branco);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--azul-escuro);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--azul);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #414657;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--azul);
+}
+
+nav a:last-child {
+    color: var(--azul);
+}
+
+/* =========================
+   BANNER PRINCIPAL
+========================= */
+
+.hero {
+    padding: 28px 0 20px;
+}
+
+.hero-content {
+    min-height: 310px;
+    padding: 48px 55px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: linear-gradient(115deg, #eaf2ff, #dce8ff);
+}
+
+.hero h1 {
+    max-width: 650px;
+    color: var(--azul-escuro);
+    font-size: clamp(30px, 3.5vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 560px;
+    font-size: 15px;
+    color: #53647b;
+    margin-bottom: 25px;
+}
+
+.hero-card {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.hero-card h3 {
+    color: var(--azul-escuro);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.hero-card p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid var(--azul);
+    border-radius: 25px;
+    background: var(--azul);
+    color: var(--branco);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--azul-escuro);
+    border-color: var(--azul-escuro);
+    transform: translateY(-1px);
+}
+
+.btn-secundario {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 20px;
+    border: 1px solid #cdd2dc;
+    border-radius: 25px;
+    background: var(--branco);
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-secundario:hover {
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+.btn-perigo {
+    background: #dc2626;
+    border-color: #dc2626;
+}
+
+.btn-perigo:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    padding: 35px 0 55px;
+}
+
+.secao-titulo {
+    margin-bottom: 25px;
+}
+
+.secao-titulo h2 {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    margin-bottom: 5px;
+}
+
+.secao-titulo p {
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 32px;
+}
+
+.filtro {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    background: #eceef1;
+    border: none;
+    border-radius: 22px;
+    color: #363b46;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.filtro:hover {
+    background: var(--azul-claro);
+    color: var(--azul);
+}
+
+/* =========================
+   CATÁLOGO DE SERVIÇOS
+========================= */
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    min-width: 0;
+    padding: 14px;
+    background: var(--branco);
+    border: 1px solid #eff0f4;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(20, 35, 70, 0.025);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+}
+
+.card h3 {
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 700;
+    margin: 12px 0 7px;
+}
+
+.card p {
+    color: var(--cinza);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.card img {
+    width: 100%;
+    height: 175px;
+    object-fit: contain;
+    padding: 15px;
+    background: #f3f4f6;
+    border-radius: 7px;
+}
+
+.preco {
+    display: block;
+    color: var(--texto);
+    font-size: 17px;
+    font-weight: 800;
+    margin: 10px 0 14px;
+}
+
+.card form {
+    margin-top: 10px;
+}
+
+.card .btn {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 12px;
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+.formulario {
+    width: 100%;
+    max-width: 520px;
+    margin: 45px auto;
+    padding: 35px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.formulario h1,
+.formulario h2 {
+    text-align: center;
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+}
+
+.formulario > p {
+    text-align: center;
+    color: var(--cinza);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dfe2e9;
+    border-radius: 7px;
+    background: var(--branco);
+    color: var(--texto);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    border-color: var(--azul);
+}
+
+.formulario > .btn,
+.formulario button.btn {
+    width: 100%;
+}
+
+.link-formulario {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.link-formulario a {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+/* =========================
+   PÁGINAS INTERNAS
+========================= */
+
+.pagina {
+    min-height: 65vh;
+    padding: 45px 0 60px;
+}
+
+.pagina h1 {
+    color: var(--azul-escuro);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.pagina > .container > p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+/* =========================
+   MENSAGENS
+========================= */
+
+.mensagem {
+    margin: 20px 0;
+    padding: 14px 17px;
+    border-radius: 8px;
+    background: #eaf2ff;
+    color: #174a91;
+    font-size: 13px;
+}
+
+.mensagem.erro {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.mensagem.sucesso {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* =========================
+   TABELAS E CARRINHO
+========================= */
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: var(--branco);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--borda);
+    font-size: 13px;
+}
+
+th {
+    background: #f0f4ff;
+    color: var(--azul-escuro);
+    font-weight: 700;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.total {
+    text-align: right;
+    color: var(--azul-escuro);
+    font-size: 22px;
+    font-weight: 800;
+    margin: 25px 0;
+}
+
+/* =========================
+   CHAMADA FINAL
+========================= */
+
+.cta {
+    padding: 55px 20px;
+    background: var(--azul-escuro);
+    text-align: center;
+}
+
+.cta h2 {
+    color: var(--branco);
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #d3e0f3;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    padding: 25px 0;
+    background: #ffffff;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+footer p {
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1050px) {
+    .servicos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .navbar {
+        gap: 18px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 16px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 35px 25px;
+    }
+
+    .hero-card {
+        padding: 22px;
+    }
+
+    .servicos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        height: 140px;
+    }
+
+    .secao-titulo h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: 94%;
+    }
+
+    .servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 190px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .formulario {
+        padding: 24px 18px;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes .btn,
+    .acoes .btn-secundario {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 11px;
+        font-size: 12px;
+    }
+}
